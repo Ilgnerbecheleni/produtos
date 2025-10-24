@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Supabase — SELECT simples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; max-width: 900px; margin: 32px auto; padding: 0 16px; }
+    h1 { margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Demo Supabase — SELECT *</h1>
+  <small>Abra o console (F12) para ver os logs.</small>
+
+  <table id="grid" style="display:none">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+  
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+ <script src="./main.js"></script>
+  <script>
+    
+
+console.log(_supabase)
+    async function load() {
+     const { data, error } = await _supabase
+  .from('categorias')
+  .select()
+
+  console.log(data)
+    }
+load()
+
+
+   
+  </script>
+</body>
+</html>
